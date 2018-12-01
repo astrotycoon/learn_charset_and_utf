@@ -49,17 +49,17 @@ size_t utf8_decode_length(uint8_t first_byte)
 {
 #if 0
 /* 方法一 */
-    if ((first_byte & 0xF8) == 0xF0) {
-        return 4;
-    }
- 
-    if ((first_byte & 0xF0) == 0xE0) {
-        return 3;
-    }
- 
-    if ((first_byte & 0xE0) == 0xC0) {
-        return 2;
-    }
+	if ((first_byte & 0xF8) == 0xF0) {
+		return 4;
+	}
+
+	if ((first_byte & 0xF0) == 0xE0) {
+		return 3;
+	}
+
+	if ((first_byte & 0xE0) == 0xC0) {
+		return 2;
+	}
 
 	if ((first_byte & 0x80) == 0) {
 		return 1;   /* ASCII */
