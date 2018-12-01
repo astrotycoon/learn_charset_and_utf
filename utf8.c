@@ -62,8 +62,8 @@ size_t utf8_decode_length(uint8_t first_byte)
     }
 
 	if ((first_byte & 0x80) == 0) {
-    	return 1;   /* ASCII */
-  	}
+		return 1;   /* ASCII */
+	}
 
 	return 0;
 #else
